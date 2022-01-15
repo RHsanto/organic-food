@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Box,  Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,41 +13,67 @@ import FreshMeat from "./FreshMeat";
 import Vegetable from "./Vegetable";
 import FastFood from "./FastFood";
 
+
 const FeaturesProducts = () => {
 
   return (
     <Box>
       <Typography variant="h3"> Features Product </Typography>
 
-      <Container>
+      <Container sx={{marginTop:"20px"}}>
         <Router>
           <Box>
             <NavLink
-              style={{ textDecoration: "none", padding: "0px 10px" }}
+               style={isActive => ({ 
+                fontWeight:"500",
+                padding: "0px 10px" ,
+                fontSize:"18px",textDecoration: "none",
+                color: isActive ? "green" : "black"
+              })}
               to="/allFoods"
             >
               All{" "}
             </NavLink>
             <NavLink
-              style={{ textDecoration: "none", padding: "0px 10px" }}
               to="/oranges"
+              style={isActive => ({ 
+                fontWeight:"500",
+                padding: "0px 10px" ,
+                fontSize:"18px",textDecoration: "none",
+                color: isActive ? "green" : "black"
+              })}
             >
               Oranges{" "}
             </NavLink>
             <NavLink
-              style={{ textDecoration: "none", padding: "0px 10px" }}
+              style={isActive => ({ 
+                fontWeight:"500",
+                padding: "0px 10px" ,
+                fontSize:"18px",textDecoration: "none",
+                color: isActive ? "green" : "black"
+              })}
               to="/freshmeat"
             >
               Fresh Meat
             </NavLink>
             <NavLink
-              style={{ textDecoration: "none", padding: "0px 10px" }}
+                style={isActive => ({ 
+                  fontWeight:"500",
+                  padding: "0px 10px" ,
+                  fontSize:"18px",textDecoration: "none",
+                  color: isActive ? "green" : "black"
+                })}
               to="/vegetables"
             >
               Vegetables
             </NavLink>
             <NavLink
-              style={{ textDecoration: "none", padding: "0px 10px" }}
+               style={isActive => ({ 
+                fontWeight:"500",
+                padding: "0px 10px" ,
+                fontSize:"18px",textDecoration: "none",
+                color: isActive ? "green" : "black"
+              })}
               to="/fastfood"
             >
               FastFood
