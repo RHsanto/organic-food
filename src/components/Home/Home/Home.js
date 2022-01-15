@@ -1,12 +1,14 @@
-import React from 'react';
-import FeaturesProducts from '../FeaturesProducts/FeaturesProducts';
-
+import React from "react";
+import Navigation from "../../Shared/Navigation/Navigation";
+import TopHeader from "../../Shared/TopHeader/TopHeader";
+import FeaturesProducts from "../FeaturesProducts/FeaturesProducts";
 
 const Home = () => {
   return (
     <div>
-      <h1>Home </h1>
-     <FeaturesProducts/>
+      <TopHeader />
+      <Navigation />
+      <FeaturesProducts />
     </div>
   );
 };
