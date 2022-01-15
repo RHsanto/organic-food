@@ -1,19 +1,20 @@
 import React from 'react';
-import {Box, Button, Container, Typography} from '@mui/material'
+import {Box,  Container, Typography} from '@mui/material'
 import { 
   BrowserRouter as Router,
    Switch,
    Route,
    NavLink,
  } from 'react-router-dom';
-import AllFood from './AllFood';
-import OrangesFood from './OrangesFood';
-import FreshMeat from './FreshMeat';
-import Vegetable from './Vegetable';
-import FastFood from './FastFood';
 
+import AllFood from './AllFood'
+import OrangesFood from './OrangesFood'
+import FreshMeat from './FreshMeat'
+import Vegetable from './Vegetable'
+import FastFood from './FastFood'
 
 const FeaturesProducts = () => {
+
 
   return (
     <div>
@@ -29,8 +30,8 @@ const FeaturesProducts = () => {
               <NavLink to='/fastfood'>FastFood</NavLink>
           </Box>
           <Switch>
-            <Route exact path='/'>
-              <AllFood/>
+            <Route exact path='/' >
+           <AllFood/>
             </Route>
             <Route  path='/allFoods'>
               <AllFood/>
@@ -45,7 +46,7 @@ const FeaturesProducts = () => {
               <Vegetable/>
             </Route>
             <Route path='/fastfood'>
-              <FastFood></FastFood>
+              <FastFood/>
             </Route>
           </Switch>
         </Router>
