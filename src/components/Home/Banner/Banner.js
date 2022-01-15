@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Banner = () => {
@@ -12,50 +12,52 @@ const Banner = () => {
       <Container>
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          sx={{ px: 3 }}
+          spacing={{ xs: 0, md: 3 }}
+          columns={{ xs: 12, sm: 12, md: 12 }}
+          sx={{ px: { xs: 0, md: 3 } }}
         >
           {/* all departments area here  */}
           <Grid
             item
-            xs={2}
-            sm={4}
+            xs={12}
+            sm={12}
             md={3}
             sx={{
               bgcolor: "#7FAD39",
             }}
           >
-            <Box
+            <Button
               sx={{
-                py: 1,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                py: 1.5,
                 color: "#FFF",
               }}
             >
               <MenuIcon sx={{ px: 1 }} />{" "}
-              <Typography variant="h6" sx={{ pr: 3 }}>
+              <Typography
+                variant="p"
+                sx={{ pr: 3, fontSize: "14px", fontWeight: "bold" }}
+              >
                 All departments
               </Typography>
               <KeyboardArrowDownIcon />
-            </Box>
+            </Button>
           </Grid>
+
           {/* search area here and call section here  */}
-          <Grid item xs={2} sm={4} md={9} container>
+          <Grid item xs={12} sm={12} md={9} container>
             {/* search area here  */}
-            <Grid item xs={2} sm={4} md={9} sx={{ border: 1 }}>
+            <Grid item xs={12} sm={12} md={9} sx={{ border: 1 }}>
               <InputBase
-                sx={{ ml: 1, flex: 1 }}
+                sx={{ flex: 1, px: 0 }}
                 placeholder="What do you need?"
               />
               <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
                 <SearchIcon />
               </IconButton>
             </Grid>
+
             {/* phone number area here  */}
-            <Grid item xs={2} sm={4} md={3}>
+            <Grid item xs={12} sm={12} md={3}>
               Hello
             </Grid>
           </Grid>
