@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 import {
@@ -14,6 +15,7 @@ import FastFood from "./FastFood";
 
 
 const FeaturesProducts = () => {
+
   return (
     <Box>
       <Typography variant="h3"> Features Product </Typography>
@@ -78,24 +80,12 @@ const FeaturesProducts = () => {
             </NavLink>
           </Box>
           <Switch>
-            <Route exact path="/">
-              <AllFood />
-            </Route>
-            <Route path="/allFoods">
-              <AllFood />
-            </Route>
-            <Route path="/oranges">
-              <OrangesFood />
-            </Route>
-            <Route path="/freshmeat">
-              <FreshMeat />
-            </Route>
-            <Route path="/vegetables">
-              <Vegetable />
-            </Route>
-            <Route path="/fastfood">
-              <FastFood></FastFood>
-            </Route>
+            <Route exact path='/' component={AllFood}/>
+            <Route  path='/allFoods' component={AllFood}/>
+            <Route  path='/oranges' component={OrangesFood}/>
+            <Route  path='/freshmeat' component={FreshMeat}/>
+            <Route path='/vegetables' component={Vegetable}/>
+            <Route path='/fastfood' component={FastFood}/>
           </Switch>
         </Router>
       </Container>
