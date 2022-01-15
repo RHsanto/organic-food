@@ -1,15 +1,16 @@
+import { Box } from "@mui/material";
 import React from "react";
 import Navigation from "../../Shared/Navigation/Navigation";
 import TopHeader from "../../Shared/TopHeader/TopHeader";
-import FeaturesProducts from "../FeaturesProducts/FeaturesProducts";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
   return (
-    <div>
+    <Box>
       <TopHeader />
       <Navigation />
-      <FeaturesProducts />
-    </div>
+      <Banner />
+    </Box>
   );
 };
 

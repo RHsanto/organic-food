@@ -1,12 +1,13 @@
+import { Box } from "@mui/material";
 import React from "react";
 import "./App.css";
 import Home from "./components/Home/Home/Home";
 
 function App() {
   return (
-    <div className="App">
+    <Box className="App">
       <Home />
-    </div>
+    </Box>
   );
 }
 
