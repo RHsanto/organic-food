@@ -98,16 +98,16 @@ const Navigation = () => {
                 justifyContent: "center",
               }}
             >
-              <Button sx={{ mx: 2, fontWeight: "bold", color: "text.primary" }}>
+              <Button sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}>
                 Home
               </Button>
-              <Button sx={{ mx: 2, fontWeight: "bold", color: "text.primary" }}>
+              <Button sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}>
                 Shop
               </Button>
-              <Button sx={{ mx: 2, fontWeight: "bold", color: "text.primary" }}>
+              <Button sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}>
                 Blog
               </Button>
-              <Button sx={{ mx: 2, fontWeight: "bold", color: "text.primary" }}>
+              <Button sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}>
                 Contact
               </Button>
             </Box>
@@ -134,18 +134,18 @@ const Navigation = () => {
                 }}
               >
                 <Badge badgeContent={4} color="success">
-                  <FavoriteIcon sx={{ color: "text.primary", mx: 1.2 }} />
+                  <FavoriteIcon sx={{ background: "text.primary", mx: 1.2 }} />
                 </Badge>
                 <Badge badgeContent={4} color="success">
-                  <LocalMallIcon sx={{ color: "text.primary", mx: 1.2 }} />
+                  <LocalMallIcon sx={{ background: "text.primary", mx: 1.2 }} />
                 </Badge>
 
                 <Typography
-                  sx={{ color: "gray", px: 2, display: "flex" }}
+                  sx={{ background: "gray", px: 2, display: "flex" }}
                   variant="p"
                 >
                   item:{" "}
-                  <Stack sx={{ fontWeight: "bold", color: "text.primary" }}>
+                  <Stack sx={{ fontWeight: "bold", background: "text.primary" }}>
                     $150.00
                   </Stack>
                 </Typography>

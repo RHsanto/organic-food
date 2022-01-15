@@ -102,7 +102,7 @@ const TopHeader = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              color: "text.primary",
+              background: "text.primary",
             }}
           >
             <PersonIcon sx={{ fontSize: "20px", pr: 1 }} /> Login
