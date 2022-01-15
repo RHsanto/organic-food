@@ -17,7 +17,7 @@ const TopHeader = () => {
   };
 
   return (
-    <Box sx={{ bgcolor: "#F5F5F5", py: 1.5 }}>
+    <Box sx={{ bgcolor: "#F5F5F5", py: 1 }}>
       <Container sx={{ display: "flex", justifyContent: "space-between" }}>
         {/* email and text area of top navigation */}
         <Box
@@ -45,6 +45,7 @@ const TopHeader = () => {
           <Typography
             sx={{
               fontSize: "14px",
+              display: { xs: "none", md: "block" },
             }}
           >
             Free Shipping for all Order of $99
@@ -67,10 +68,16 @@ const TopHeader = () => {
           </Box>
           {/* divider start here  */}
           <Box
-            sx={{ height: "20px", width: "1px", bgcolor: "lightgray", mx: 2 }}
+            sx={{
+              height: "20px",
+              width: "1px",
+              bgcolor: "lightgray",
+              mx: 2,
+              display: { xs: "none", md: "block" },
+            }}
           ></Box>
           {/* language area here */}
-          <Box>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
             <TextField
               select
               value={language}
