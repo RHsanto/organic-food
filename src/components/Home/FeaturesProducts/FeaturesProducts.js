@@ -20,7 +20,7 @@ const FeaturesProducts = () => {
     <Box>
       <Typography variant="h3"> Features Product </Typography>
 
-      <Container sx={{marginTop:"20px"}}>
+      <Container sx={{marginTop:"20px", textAlign:"center"}}>
         <Router>
           <Box>
             <NavLink
