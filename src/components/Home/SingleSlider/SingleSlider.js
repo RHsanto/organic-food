@@ -20,7 +20,9 @@ const SingleSlider = () => {
     return (
       <div onClick={onClick} className={className}>
         <ArrowForwardIos
+
           style={{ color: "#1c1c1c", fontSize: "14px" }}
+
         ></ArrowForwardIos>
       </div>
     );
@@ -31,6 +33,7 @@ const SingleSlider = () => {
     return (
       <div className={className} onClick={onClick}>
         <ArrowBackIos
+
           style={{ color: "#1c1c1c", fontSize: "14px" }}
         ></ArrowBackIos>
       </div>
@@ -41,7 +44,7 @@ const SingleSlider = () => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     autoplay: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
