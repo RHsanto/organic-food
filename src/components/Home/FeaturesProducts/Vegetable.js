@@ -5,7 +5,7 @@ import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import RepeatSharpIcon from '@mui/icons-material/RepeatSharp';
 import './Feactures.css'
 import { Link } from 'react-router-dom';
-const FreshMeat = () => {
+const Vegetable = () => {
   const [featuresProducts,setFeaturesProducts]=useState(null);
   useEffect(()=>{
    setTimeout(()=>{
@@ -57,4 +57,4 @@ const FreshMeat = () => {
   );
 };
 
-export default FreshMeat;
+export default Vegetable;
