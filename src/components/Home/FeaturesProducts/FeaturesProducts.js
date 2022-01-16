@@ -17,10 +17,10 @@ import FastFood from "./FastFood";
 const FeaturesProducts = () => {
 
   return (
-    <Box>
+    <Box sx={{textAlign:"center"}}>
       <Typography variant="h3"> Features Product </Typography>
 
-      <Container sx={{marginTop:"20px", textAlign:"center"}}>
+      <Container sx={{marginTop:"20px" }}>
         <Router>
           <Box>
             <NavLink
