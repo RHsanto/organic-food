@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
+import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 import TopHeader from "../../Shared/TopHeader/TopHeader";
 import BannerAndSearch from "../BannerAndSearch/BannerAndSearch";
@@ -14,6 +15,7 @@ const Home = () => {
       <BannerAndSearch />
       <SingleSlider />
       <FeaturesProducts />
+      <Footer />
     </Box>
   );
 };
