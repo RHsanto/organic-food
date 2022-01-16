@@ -1,0 +1,50 @@
+[
+  {
+    "img":"https://preview.colorlib.com/theme/ogani/img/featured/feature-1.jpg.webp",
+    "title":"Crab Pool Security",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    "price":"25"
+  },
+  {
+    "img":"https://preview.colorlib.com/theme/ogani/img/featured/feature-7.jpg.webp",
+    "title":"Crab Pool Security",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    "price":"45"
+  },
+  {
+    "img":"https://preview.colorlib.com/theme/ogani/img/featured/feature-8.jpg.webp",
+    "title":"Crab Pool Security",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    "price":"44"
+  },
+  {
+    "img":"https://preview.colorlib.com/theme/ogani/img/featured/feature-2.jpg.webp",
+    "title":"Crab Pool Security",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    "price":"36"
+  },
+  {
+    "img":"https://preview.colorlib.com/theme/ogani/img/featured/feature-5.jpg.webp",
+    "title":"Crab Pool Security",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    "price":"29"
+  },
+  {
+    "img":"https://preview.colorlib.com/theme/ogani/img/featured/feature-6.jpg.webp",
+    "title":"Crab Pool Security",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    "price":"40"
+  },
+  {
+    "img":"https://preview.colorlib.com/theme/ogani/img/featured/feature-3.jpg.webp",
+    "title":"Crab Pool Security",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    "price":"19"
+  },
+  {
+    "img":"https://preview.colorlib.com/theme/ogani/img/featured/feature-4.jpg.webp",
+    "title":"Crab Pool Security",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    "price":"30"
+  }
+]

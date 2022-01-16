@@ -98,16 +98,24 @@ const Navigation = () => {
                 justifyContent: "center",
               }}
             >
-              <Button sx={{ mx: 2, fontWeight: "bold", color: "text.primary" }}>
+              <Button
+                sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}
+              >
                 Home
               </Button>
-              <Button sx={{ mx: 2, fontWeight: "bold", color: "text.primary" }}>
+              <Button
+                sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}
+              >
                 Shop
               </Button>
-              <Button sx={{ mx: 2, fontWeight: "bold", color: "text.primary" }}>
+              <Button
+                sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}
+              >
                 Blog
               </Button>
-              <Button sx={{ mx: 2, fontWeight: "bold", color: "text.primary" }}>
+              <Button
+                sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}
+              >
                 Contact
               </Button>
             </Box>
@@ -133,7 +141,7 @@ const Navigation = () => {
                   alignItems: "center",
                 }}
               >
-                <Badge badgeContent={4} color="success">
+                <Badge badgeContent={1} color="success">
                   <FavoriteIcon sx={{ color: "text.primary", mx: 1.2 }} />
                 </Badge>
                 <Badge badgeContent={4} color="success">

@@ -1,0 +1,33 @@
+a{
+  color: black;
+}
+.box{
+  background-color:#c6d7f1;
+  position: relative;
+}
+.box img{
+  width: 100%;
+}
+
+.icon-list li{
+  list-style: none;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  background-color: white;
+  transition:  .5s ;
+  cursor: pointer;
+}
+
+
+.icon-list li:hover a{
+  color: white;
+}
+ .icon-list li:hover{
+  background-color: #5f98ee;
+  transform: rotate(360deg);
+ 
+ }
+
+
