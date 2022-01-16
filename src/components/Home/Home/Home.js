@@ -9,8 +9,9 @@ const Home = () => {
     <div>
       <TopHeader />
       <Navigation />
-      <SingleSlider />
+     
       <FeaturesProducts />
+      <SingleSlider />
     </div>
   );
 };
