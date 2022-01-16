@@ -18,7 +18,8 @@ const FeaturesProducts = () => {
 
   return (
     <Box sx={{textAlign:"center"}}>
-      <Typography variant="h3"> Features Product </Typography>
+      <Typography variant="h4"
+        sx={{marginTop:"50px", fontWeight:"bold"}}> Features Product </Typography>
 
       <Container sx={{marginTop:"20px" }}>
         <Router>
@@ -26,7 +27,7 @@ const FeaturesProducts = () => {
             <NavLink
                style={isActive => ({ 
                 fontWeight:"500",
-                padding: "0px 10px" ,
+                marginLeft:"10px",
                 fontSize:"18px",textDecoration: "none",
                 color: isActive ? "green" : "black"
               })}
@@ -38,7 +39,7 @@ const FeaturesProducts = () => {
               to="/oranges"
               style={isActive => ({ 
                 fontWeight:"500",
-                padding: "0px 10px" ,
+                marginLeft:"10px",
                 fontSize:"18px",textDecoration: "none",
                 color: isActive ? "green" : "black"
               })}
@@ -48,18 +49,18 @@ const FeaturesProducts = () => {
             <NavLink
               style={isActive => ({ 
                 fontWeight:"500",
-                padding: "0px 10px" ,
+                marginLeft:"10px",
                 fontSize:"18px",textDecoration: "none",
                 color: isActive ? "green" : "black"
               })}
               to="/freshmeat"
             >
-              Fresh Meat
+              FreshMeat
             </NavLink>
             <NavLink
                 style={isActive => ({ 
                   fontWeight:"500",
-                  padding: "0px 10px" ,
+                  marginLeft:"10px",
                   fontSize:"18px",textDecoration: "none",
                   color: isActive ? "green" : "black"
                 })}
@@ -70,7 +71,7 @@ const FeaturesProducts = () => {
             <NavLink
                style={isActive => ({ 
                 fontWeight:"500",
-                padding: "0px 10px" ,
+               marginLeft:"10px",
                 fontSize:"18px",textDecoration: "none",
                 color: isActive ? "green" : "black"
               })}

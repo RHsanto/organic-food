@@ -2,13 +2,22 @@ a{
   color: black;
 }
 .box{
-  background-color:#c6d7f1;
   position: relative;
+  overflow: hidden;
 }
 .box img{
   width: 100%;
 }
+.icon-list{
+  position: absolute;
+  width: 100%;
+  top: -50%;
+  transition: all 0.5s ease;
+}
 
+.box:hover .icon-list{
+  top:180px;
+}
 .icon-list li{
   list-style: none;
   display: inline-block;
@@ -18,6 +27,7 @@ a{
   background-color: white;
   transition:  .5s ;
   cursor: pointer;
+ 
 }
 
 
@@ -25,7 +35,7 @@ a{
   color: white;
 }
  .icon-list li:hover{
-  background-color: #5f98ee;
+  background-color: #93b621;
   transform: rotate(360deg);
  
  }
