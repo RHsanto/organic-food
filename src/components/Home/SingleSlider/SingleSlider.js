@@ -42,21 +42,74 @@ const SingleSlider = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplaySpeed: 1000,
-    // autoplay: true,
+    autoplay: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <Container>
-      {/* */}
-
       <Slider {...settings}>
         {datas.map((data) => (
-          <Box>
-            <Box sx={{ textTransform:'uppercase',fontWeight:'900',textAlign: "center",position:'relative' }}>
-              <img style={{ display: "inline-block" }} src={data.img} alt="" />
-              <Typography sx={{bottom:"20px",left:'17%',position:'absolute',zIndex:'10',textAlign:'center',backgroundColor:"white",padding:'5px 30px'}} variant='h6'>{data.name}</Typography>
+          <Box sx={{}}>
+            <Box
+              sx={{
+                height: "270px",
+                margin: "0px 15px",
+              }}
+              style={{
+                backgroundImage: `url(${data.img})`,
+                backgroundSize: "cover",
+                position: "relative",
+              }}
+            >
+              <Typography
+                style={{
+                  width: "85%",
+                  backgroundColor: "white",
+                  position: "absolute",
+                  bottom: "18px",
+                  left: "0",
+                  right: "0",
+                  margin: "auto",
+                }}
+                sx={{
+                  textAlign: "center",
+                  padding: "5px 0px",
+
+                  textTransform: "uppercase",
+                  fontWeight: "900",
+                }}
+                variant="p"
+              >
+                {data.name}
+              </Typography>
             </Box>
           </Box>
         ))}
