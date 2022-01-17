@@ -67,7 +67,7 @@ const BannerAndSearch = () => {
       <Container>
         <Box
           sx={{
-            display: { xl: "block", md: "flex" },
+            display: { xs: "block", md: "flex" },
             justifyContent: "space-between",
             alignItems: "flex-start",
           }}
