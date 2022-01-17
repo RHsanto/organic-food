@@ -15,12 +15,12 @@ import FastFood from "./FastFood";
 const FeaturesProducts = () => {
   return (
     <Box sx={{ textAlign: "center" }}>
-      <Typography variant="h4" sx={{ marginTop: "50px", fontWeight: "bold" }}>
+      <Typography variant="h4" sx={{ marginTop: "50px", fontWeight: 800 }}>
         {" "}
         Features Product{" "}
       </Typography>
 
-      <Container sx={{ marginTop: "20px" }}>
+      <Container sx={{ my: 5 }}>
         <Router>
           <Box>
             <NavLink
