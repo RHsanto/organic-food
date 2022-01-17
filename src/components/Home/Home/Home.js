@@ -4,6 +4,7 @@ import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 import TopHeader from "../../Shared/TopHeader/TopHeader";
 import BannerAndSearch from "../BannerAndSearch/BannerAndSearch";
+import Blog from "../Blog/Blog";
 import FeaturesProducts from "../FeaturesProducts/FeaturesProducts";
 import SingleSlider from "../SingleSlider/SingleSlider";
 
@@ -15,6 +16,7 @@ const Home = () => {
       <BannerAndSearch />
       <SingleSlider />
       <FeaturesProducts />
+      <Blog />
       <Footer />
     </Box>
   );
