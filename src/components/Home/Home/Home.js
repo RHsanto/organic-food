@@ -6,6 +6,7 @@ import TopHeader from "../../Shared/TopHeader/TopHeader";
 import BannerAndSearch from "../BannerAndSearch/BannerAndSearch";
 import Blog from "../Blog/Blog";
 import FeaturesProducts from "../FeaturesProducts/FeaturesProducts";
+import FruitBanner from "../FruitBanner/FruitBanner";
 import SingleSlider from "../SingleSlider/SingleSlider";
 
 const Home = () => {
@@ -16,7 +17,8 @@ const Home = () => {
       <BannerAndSearch />
       <SingleSlider />
       <FeaturesProducts />
-      <Blog />
+      <FruitBanner/>
+          <Blog />
       <Footer />
     </Box>
   );
