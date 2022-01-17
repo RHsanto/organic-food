@@ -6,18 +6,18 @@ import RepeatSharpIcon from '@mui/icons-material/RepeatSharp';
 import './Feactures.css'
 import { Link } from 'react-router-dom';
 const FreshMeat = () => {
-  const [featuresProducts,setFeaturesProducts]=useState(null);
+  const [featuresProducts,setFeaturesProducts]=useState([]);
+  const [loading,setLoading]=useState(true)
   useEffect(()=>{
-   setTimeout(()=>{
     fetch('./featuresProducts.json')
     .then(res=>res.json())
     .then(data=>(setFeaturesProducts(data.slice(3,6))))
-   },2000)
-  })
+    .finally(() => setLoading(false));
+  },[])
   return (
     <Box sx={{ flexGrow: 1,textAlign:"center", margin:"50px 0px" }}>
     <Grid container spacing={{ xs: 5, md: 6 }} columns={{ xs: 1, sm: 8, md: 12 }}>
-      {featuresProducts &&(
+      {
         featuresProducts.map((featuresProduct) => (
           <Grid item xs={2} sm={4} md={3} key={featuresProduct}>
         <Box
@@ -34,14 +34,14 @@ const FreshMeat = () => {
         </Box>
         </Grid>
         ))
-      )}
+      }
     </Grid>
 
     {/* here use skelton */}
-      {!featuresProducts &&(
+      {loading &&(
         <Box sx={{margin:"50px 0px"}}>
            <Grid  container spacing={{ xs: 5, md: 6 }} columns={{ xs: 1, sm: 8, md: 12 }}>
-         {Array.from(Array(3)).map((_, index) => (
+         {featuresProducts.map((_, index) => (
            <Grid   item xs={2} sm={4} md={3} key={index}>
              <Skeleton variant="rectangular" sx={{width:"100%", height:"252px"}}/>
              <Skeleton  sx={{margin:"10px 0px"}} width="100%" variant='h2'/>
