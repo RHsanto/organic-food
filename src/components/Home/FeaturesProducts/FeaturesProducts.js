@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 import {
@@ -13,23 +12,24 @@ import FreshMeat from "./FreshMeat";
 import Vegetable from "./Vegetable";
 import FastFood from "./FastFood";
 
-
 const FeaturesProducts = () => {
-
   return (
-    <Box sx={{textAlign:"center"}}>
-      <Typography variant="h4"
-        sx={{marginTop:"50px", fontWeight:"bold"}}> Features Product </Typography>
+    <Box sx={{ textAlign: "center" }}>
+      <Typography variant="h4" sx={{ marginTop: "50px", fontWeight: 800 }}>
+        {" "}
+        Features Product{" "}
+      </Typography>
 
-      <Container sx={{marginTop:"20px" }}>
+      <Container sx={{ my: 5 }}>
         <Router>
           <Box>
             <NavLink
-               style={isActive => ({ 
-                fontWeight:"500",
-                marginLeft:"10px",
-                fontSize:"18px",textDecoration: "none",
-                color: isActive ? "green" : "black"
+              style={(isActive) => ({
+                fontWeight: "500",
+                marginLeft: "10px",
+                fontSize: "18px",
+                textDecoration: "none",
+                color: isActive ? "green" : "black",
               })}
               to="/allFoods"
             >
@@ -37,43 +37,47 @@ const FeaturesProducts = () => {
             </NavLink>
             <NavLink
               to="/oranges"
-              style={isActive => ({ 
-                fontWeight:"500",
-                marginLeft:"10px",
-                fontSize:"18px",textDecoration: "none",
-                color: isActive ? "green" : "black"
+              style={(isActive) => ({
+                fontWeight: "500",
+                marginLeft: "10px",
+                fontSize: "18px",
+                textDecoration: "none",
+                color: isActive ? "green" : "black",
               })}
             >
               Oranges{" "}
             </NavLink>
             <NavLink
-              style={isActive => ({ 
-                fontWeight:"500",
-                marginLeft:"10px",
-                fontSize:"18px",textDecoration: "none",
-                color: isActive ? "green" : "black"
+              style={(isActive) => ({
+                fontWeight: "500",
+                marginLeft: "10px",
+                fontSize: "18px",
+                textDecoration: "none",
+                color: isActive ? "green" : "black",
               })}
               to="/freshmeat"
             >
               FreshMeat
             </NavLink>
             <NavLink
-                style={isActive => ({ 
-                  fontWeight:"500",
-                  marginLeft:"10px",
-                  fontSize:"18px",textDecoration: "none",
-                  color: isActive ? "green" : "black"
-                })}
+              style={(isActive) => ({
+                fontWeight: "500",
+                marginLeft: "10px",
+                fontSize: "18px",
+                textDecoration: "none",
+                color: isActive ? "green" : "black",
+              })}
               to="/vegetables"
             >
               Vegetables
             </NavLink>
             <NavLink
-               style={isActive => ({ 
-                fontWeight:"500",
-               marginLeft:"10px",
-                fontSize:"18px",textDecoration: "none",
-                color: isActive ? "green" : "black"
+              style={(isActive) => ({
+                fontWeight: "500",
+                marginLeft: "10px",
+                fontSize: "18px",
+                textDecoration: "none",
+                color: isActive ? "green" : "black",
               })}
               to="/fastfood"
             >
@@ -81,12 +85,12 @@ const FeaturesProducts = () => {
             </NavLink>
           </Box>
           <Switch>
-            <Route exact path='/' component={AllFood}/>
-            <Route  path='/allFoods' component={AllFood}/>
-            <Route  path='/oranges' component={OrangesFood}/>
-            <Route  path='/freshmeat' component={FreshMeat}/>
-            <Route path='/vegetables' component={Vegetable}/>
-            <Route path='/fastfood' component={FastFood}/>
+            <Route exact path="/" component={AllFood} />
+            <Route path="/allFoods" component={AllFood} />
+            <Route path="/oranges" component={OrangesFood} />
+            <Route path="/freshmeat" component={FreshMeat} />
+            <Route path="/vegetables" component={Vegetable} />
+            <Route path="/fastfood" component={FastFood} />
           </Switch>
         </Router>
       </Container>

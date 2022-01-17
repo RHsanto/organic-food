@@ -1,4 +1,5 @@
 
+
 import { Box, Grid, Skeleton, Typography} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -50,11 +51,10 @@ const AllFood = () => {
            </Grid>
          ))}
        </Grid>
+
         </Box>
-      )
-     
-    }
-  </Box>
+      )}
+    </Box>
   );
 };
 
