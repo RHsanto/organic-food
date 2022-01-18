@@ -41,98 +41,97 @@ const Blog = () => {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          {blogs?.map((blog) => (
-            <Grid item xs={12} sm={12} md={4}>
-              <Card sx={{ textAlign: "start", boxShadow: "none" }}>
-                <CardMedia
-                  component="img"
-                  height="250"
-                  image={blog.img}
-                  alt="image"
-                />
-                <CardContent sx={{ px: 0 }}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: "flex-start",
-                      alignItems: "center",
-                      py: 1.5,
-                    }}
-                  >
-                    <Typography
+          {loading === "pending" ? (
+            <Box sx={{ margin: "50px 0px" }}>
+              <Grid
+                container
+                spacing={{ xs: 5, md: 6 }}
+                columns={{ xs: 1, sm: 8, md: 12 }}
+              >
+                {blogs.map((_, index) => (
+                  <Grid item xs={2} sm={4} md={4} key={index}>
+                    <Skeleton
+                      variant="rectangular"
+                      sx={{ width: "100%", height: "250px" }}
+                    />
+                    <Skeleton sx={{ m: "10px 0px" }} width="50%" variant="p" />
+                    <Skeleton sx={{ m: "10px 0px" }} width="80%" variant="h2" />
+                    <Skeleton
+                      sx={{ m: "10px 0px", py: 2 }}
+                      width="100%"
                       variant="p"
+                    />
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+          ) : (
+            blogs?.map((blog) => (
+              <Grid item xs={12} sm={12} md={4}>
+                <Card sx={{ textAlign: "start", boxShadow: "none" }}>
+                  <CardMedia
+                    component="img"
+                    height="250"
+                    image={blog.img}
+                    alt="image"
+                  />
+                  <CardContent sx={{ px: 0 }}>
+                    <Box
                       sx={{
                         display: "flex",
+                        justifyContent: "flex-start",
                         alignItems: "center",
-                        color: "#6F6F6F",
+                        py: 1.5,
                       }}
                     >
-                      <CalendarTodayIcon sx={{ fontSize: "16px", pr: 0.5 }} />{" "}
-                      {blog.date}
-                    </Typography>
+                      <Typography
+                        variant="p"
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          color: "#6F6F6F",
+                        }}
+                      >
+                        <CalendarTodayIcon sx={{ fontSize: "16px", pr: 0.5 }} />{" "}
+                        {blog.date}
+                      </Typography>
+                      <Typography
+                        variant="p"
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          px: 2,
+                          color: "#6F6F6F",
+                        }}
+                      >
+                        <CommentIcon sx={{ fontSize: "16px", pr: 0.5 }} />{" "}
+                        {blog.comments.length}
+                      </Typography>
+                    </Box>
                     <Typography
+                      gutterBottom
                       variant="p"
                       sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        px: 2,
-                        color: "#6F6F6F",
+                        color: "#000",
+                        fontWeight: "bold",
+                        fontSize: "20px",
                       }}
                     >
-                      <CommentIcon sx={{ fontSize: "16px", pr: 0.5 }} />{" "}
-                      {blog.comments.length}
+                      {blog.title}
                     </Typography>
-                  </Box>
-                  <Typography
-                    gutterBottom
-                    variant="p"
-                    sx={{
-                      color: "#000",
-                      fontWeight: "bold",
-                      fontSize: "20px",
-                    }}
-                  >
-                    {blog.title}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    sx={{ py: 1.4 }}
-                  >
-                    {blog.content}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
+                    <Typography
+                      variant="body1"
+                      color="text.secondary"
+                      sx={{ py: 1.4 }}
+                    >
+                      {blog.content}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))
+          )}
         </Grid>
-
-        {/* skelton  used here */}
-        {loading === "pending" && (
-          <Box sx={{ margin: "50px 0px" }}>
-            <Grid
-              container
-              spacing={{ xs: 5, md: 6 }}
-              columns={{ xs: 1, sm: 8, md: 12 }}
-            >
-              {blogs.map((_, index) => (
-                <Grid item xs={2} sm={4} md={4} key={index}>
-                  <Skeleton
-                    variant="rectangular"
-                    sx={{ width: "100%", height: "250px" }}
-                  />
-                  <Skeleton sx={{ m: "10px 0px" }} width="50%" variant="p" />
-                  <Skeleton sx={{ m: "10px 0px" }} width="80%" variant="h2" />
-                  <Skeleton
-                    sx={{ m: "10px 0px", py: 2 }}
-                    width="100%"
-                    variant="p"
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
-        )}
       </Container>
     </Box>
   );
