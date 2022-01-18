@@ -7,22 +7,23 @@ import {
   Container,
   Grid,
   Skeleton,
-  Stack,
   Typography,
 } from "@mui/material";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import CommentIcon from "@mui/icons-material/Comment";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { fetchBlogs } from "../../../Redux/Slices/blogSlice";
 
 const Blog = () => {
-  // blogs state here and fetch data
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // calling redux thunk to get data
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetch("/blogs.JSON")
-      .then((response) => response.json())
-      .then((data) => setBlogs(data))
-      .finally(() => setLoading(false));
-  }, []);
+    dispatch(fetchBlogs());
+  }, [dispatch]);
+
+  const blogs = useSelector((state) => state.blogs.blogs);
+  const loading = useSelector((state) => state.blogs.status);
 
   return (
     <Box>
@@ -40,7 +41,7 @@ const Blog = () => {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          {blogs.map((blog) => (
+          {blogs?.map((blog) => (
             <Grid item xs={12} sm={12} md={4}>
               <Card sx={{ textAlign: "start", boxShadow: "none" }}>
                 <CardMedia
@@ -107,7 +108,7 @@ const Blog = () => {
         </Grid>
 
         {/* skelton  used here */}
-        {loading && (
+        {loading === "pending" && (
           <Box sx={{ margin: "50px 0px" }}>
             <Grid
               container
