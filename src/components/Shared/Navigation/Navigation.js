@@ -13,6 +13,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../../../images/logo.webp";
 import { Badge, Stack } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -73,10 +74,10 @@ const Navigation = () => {
                 }}
               >
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Button>Home</Button>
-                  <Button>Shop</Button>
-                  <Button>Blog</Button>
-                  <Button>Contact</Button>
+                  <Button><NavLink to='/home'>Home</NavLink></Button>
+                  <Button><NavLink to='/shop'>Shop</NavLink></Button>
+                  <Button><NavLink to='/blog'>Blog</NavLink></Button>
+                  <Button><NavLink to='/contact'>Contact</NavLink></Button>
                 </MenuItem>
               </Menu>
             </Box>
@@ -98,26 +99,44 @@ const Navigation = () => {
                 justifyContent: "center",
               }}
             >
-              <Button
-                sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}
-              >
-                Home
-              </Button>
-              <Button
-                sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}
-              >
-                Shop
-              </Button>
-              <Button
-                sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}
-              >
-                Blog
-              </Button>
-              <Button
-                sx={{ mx: 2, fontWeight: "bold", background: "text.primary" }}
-              >
+             
+                <NavLink
+                 style={(isActive) => ({
+                  marginRight: '50px', fontWeight: "bold",
+                  letterSpacing:'2px',
+                  color: isActive ? "green" : "black",
+                })}
+                 to='/home'>Home</NavLink>
+ 
+              <NavLink
+               style={(isActive) => ({
+                marginRight: '50px', fontWeight: "bold",
+                letterSpacing:'2px',
+                color: isActive ? "green" : "black",
+              })}
+               to='/shop'>  Shop</NavLink>
+    
+             
+               <NavLink 
+               style={(isActive) => ({
+                marginRight: '50px', fontWeight: "bold",
+                letterSpacing:'2px',
+                color: isActive ? "green" : "black",
+              })}
+                to='/blog'>
+               Blog
+               </NavLink>
+  
+                <NavLink
+                 style={(isActive) => ({
+                  marginRight: '50px', fontWeight: "bold",
+                  letterSpacing:'2px',
+                  color: isActive ? "green" : "black",
+                })}
+                 to='/contact'>
                 Contact
-              </Button>
+                </NavLink>
+            
             </Box>
 
             {/* cart favourite and total information area here  */}
