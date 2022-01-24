@@ -43,3 +43,8 @@ body{
 a{
   text-decoration: none;
 }
+
+.box img{
+margin: 20px;
+}
+

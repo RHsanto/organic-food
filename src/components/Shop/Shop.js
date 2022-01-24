@@ -1,5 +1,6 @@
 import React from 'react';
 import {Box, Container,  Grid, List, ListItem, ListItemText, Slider, Typography }from '@mui/material'
+import ShopSlider from './ShopSlider';
 
 const style = {
   width: '100%',
@@ -32,12 +33,12 @@ const Shop = () => {
 
   return (
    <Container>
-   <Box>
+   <Box sx={{mt:"30px"}}>
    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
     <Grid item xs={6} sm={3} md={3} >
       {/* here list item  */}
       <Box>
-        <Typography variant='h5' sx={{m:"25px 0px",p:'10px ',textAlign:'start', fontWeight:"bold",borderBottom:'3px solid #7FAD39'}}> Department</Typography>
+        <Typography variant='h5' sx={{p:'10px ',textAlign:'start', fontWeight:"bold",borderBottom:'3px solid #7FAD39'}}> Department</Typography>
      <List sx={style} component="nav" aria-label="mailbox folders">
       <ListItem button>
         <ListItemText primary="Fresh Meat" />
@@ -92,8 +93,8 @@ const Shop = () => {
     </Grid>
 
     {/* here second grid items */}
-    <Grid item xs={6} sm={6} md={9} >
-      <>xs=2</>
+    <Grid item xs={4} sm={6} md={9} >
+   <ShopSlider/>
     </Grid>
   
 </Grid>
