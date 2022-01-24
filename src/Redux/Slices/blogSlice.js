@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 // thunk to get data using api here
 export const fetchBlogs = createAsyncThunk("blog/fetchBlogs", async () => {
-  console.log("working well");
   const response = await fetch("/blogs.JSON").then((res) => res.json());
   return response;
 });
