@@ -74,10 +74,18 @@ const Navigation = () => {
                 }}
               >
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Button><NavLink to='/home'>Home</NavLink></Button>
-                  <Button><NavLink to='/shop'>Shop</NavLink></Button>
-                  <Button><NavLink to='/blog'>Blog</NavLink></Button>
-                  <Button><NavLink to='/contact'>Contact</NavLink></Button>
+                  <Button>
+                    <NavLink to="/home">Home</NavLink>
+                  </Button>
+                  <Button>
+                    <NavLink to="/shop">Shop</NavLink>
+                  </Button>
+                  <Button>
+                    <NavLink to="/blog">Blog</NavLink>
+                  </Button>
+                  <Button>
+                    <NavLink to="/contact">Contact</NavLink>
+                  </Button>
                 </MenuItem>
               </Menu>
             </Box>
@@ -99,44 +107,54 @@ const Navigation = () => {
                 justifyContent: "center",
               }}
             >
-             
-                <NavLink
-                 style={(isActive) => ({
-                  marginRight: '50px', fontWeight: "bold",
-                  letterSpacing:'2px',
-                  color: isActive ? "green" : "black",
-                })}
-                 to='/home'>Home</NavLink>
- 
               <NavLink
-               style={(isActive) => ({
-                marginRight: '50px', fontWeight: "bold",
-                letterSpacing:'2px',
-                color: isActive ? "green" : "black",
-              })}
-               to='/shop'>  Shop</NavLink>
-    
-             
-               <NavLink 
-               style={(isActive) => ({
-                marginRight: '50px', fontWeight: "bold",
-                letterSpacing:'2px',
-                color: isActive ? "green" : "black",
-              })}
-                to='/blog'>
-               Blog
-               </NavLink>
-  
-                <NavLink
-                 style={(isActive) => ({
-                  marginRight: '50px', fontWeight: "bold",
-                  letterSpacing:'2px',
+                style={(isActive) => ({
+                  marginRight: "50px",
+                  fontWeight: "bold",
+                  letterSpacing: "2px",
                   color: isActive ? "green" : "black",
                 })}
-                 to='/contact'>
+                to="/"
+              >
+                Home
+              </NavLink>
+
+              <NavLink
+                style={(isActive) => ({
+                  marginRight: "50px",
+                  fontWeight: "bold",
+                  letterSpacing: "2px",
+                  color: isActive ? "green" : "black",
+                })}
+                to="/shop"
+              >
+                {" "}
+                Shop
+              </NavLink>
+
+              <NavLink
+                style={(isActive) => ({
+                  marginRight: "50px",
+                  fontWeight: "bold",
+                  letterSpacing: "2px",
+                  color: isActive ? "green" : "black",
+                })}
+                to="/blog"
+              >
+                Blog
+              </NavLink>
+
+              <NavLink
+                style={(isActive) => ({
+                  marginRight: "50px",
+                  fontWeight: "bold",
+                  letterSpacing: "2px",
+                  color: isActive ? "green" : "black",
+                })}
+                to="/contact"
+              >
                 Contact
-                </NavLink>
-            
+              </NavLink>
             </Box>
 
             {/* cart favourite and total information area here  */}
